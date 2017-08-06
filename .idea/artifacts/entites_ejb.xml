@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="entites:ejb">
+    <output-path>$PROJECT_DIR$/entites/target</output-path>
+    <root id="archive" name="entites-1.0-SNAPSHOT.jar">
+      <element id="artifact" artifact-name="entites:ejb exploded" />
+    </root>
+  </artifact>
+</component>

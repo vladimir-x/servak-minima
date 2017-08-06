@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2171229119">
+    <data-source source="LOCAL" name="PostgreSQL - minima@localhost" uuid="b2601919-5a9a-47a8-ac3e-85cd8673163a">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/minima</jdbc-url>
+    </data-source>
+  </component>
+</project>
