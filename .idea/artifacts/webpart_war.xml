@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="webpart:war">
-    <output-path>$PROJECT_DIR$/webpart/target</output-path>
-    <root id="archive" name="webpart-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="webpart:war exploded" />
-    </root>
-  </artifact>
-</component>
