@@ -13,8 +13,13 @@
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
-            <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform" />
 
+            <!-- настройка для Glassfish-->
+            <!--<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform" />-->
+
+            <!-- Настрйоки для Wildfly-->
+            <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" />
+            <property name="jboss.as.jpa.providerModule" value="org.hibernate:5.2.10.Final"/>
         </properties>
     </persistence-unit>
 
