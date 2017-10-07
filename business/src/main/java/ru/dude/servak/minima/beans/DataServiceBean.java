@@ -25,7 +25,7 @@ public class DataServiceBean implements DataService{
 
     public String pingBean() {
         StringBuilder sb = new StringBuilder();
-        sb.append( "Hello! I'm @Stateless bean DataServiceBean, and i want to get some DBData...");
+        sb.append( "Hello! I'm @Stateless bean DataServiceBean, and i want to get some DBData...<br/>");
 
         CriteriaBuilder builder = em.getCriteriaBuilder();
         CriteriaQuery<User> query = builder.createQuery(User.class);
@@ -41,8 +41,8 @@ public class DataServiceBean implements DataService{
 
         List<User> userList = em.createQuery(query).getResultList();
 
-        sb.append("\n And the are "  + userList.size() + " users in bd.");
-        sb.append( "bye...");
+        sb.append("<br/> And the are "  + userList.size() + " users in bd.<br/>");
+        sb.append( "bye....<br/>");
 
         return sb.toString();
     }

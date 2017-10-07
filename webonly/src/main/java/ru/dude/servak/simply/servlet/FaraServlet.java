@@ -2,6 +2,7 @@ package ru.dude.servak.simply.servlet;
 
 import ru.dude.servak.simply.cdi.SomeCDI;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
