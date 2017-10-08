@@ -1,5 +1,6 @@
 package ru.dude.servak.minima.beans;
 
+import ru.dude.servak.minima.beans.cdi.ProducedImpl;
 import ru.dude.servak.minima.beans.cdi.Scopables;
 import ru.dude.servak.minima.beans.cdi.Scopes;
 import ru.dude.servak.minima.beans.cdi.SomeCDI;
@@ -40,6 +41,9 @@ public class DataServiceBean implements DataService{
     @Inject @Scopables(Scopes.DEPENDS)
     SomeCDI dependsCDI;
 
+    @Inject
+    ProducedImpl producedCDI;
+
 
 
     public String pingBean() {
@@ -68,6 +72,7 @@ public class DataServiceBean implements DataService{
         sb.append(sessionCDI.test());
         sb.append(requestCDI.test());
         sb.append(dependsCDI.test());
+        sb.append(producedCDI.test());
         sb.append( "bye....<br/>");
 
         return sb.toString();

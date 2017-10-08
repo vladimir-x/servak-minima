@@ -7,5 +7,6 @@ public  enum Scopes{
     APPLICATION,
     SESSION,
     REQUEST,
-    DEPENDS
+    DEPENDS,
+    PRODUCE,
 }
