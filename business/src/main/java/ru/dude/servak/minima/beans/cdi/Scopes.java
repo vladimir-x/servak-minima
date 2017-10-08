@@ -1,4 +1,4 @@
-package ru.dude.servak.minima.servlets.cdi;
+package ru.dude.servak.minima.beans.cdi;
 
 /**
  * Created by dude on 06.10.2017.

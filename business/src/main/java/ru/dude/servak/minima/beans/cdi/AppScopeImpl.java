@@ -1,8 +1,6 @@
-package ru.dude.servak.minima.servlets.cdi;
+package ru.dude.servak.minima.beans.cdi;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.context.RequestScoped;
-import java.io.Serializable;
 
 /**
  * Created by dude on 06.10.2017.
@@ -13,6 +11,6 @@ import java.io.Serializable;
 public class AppScopeImpl implements  SomeCDI  {
     @Override
     public String test() {
-        return "Hi, i'm AppScopeImpl!" +this +"<br/>";
+        return "Hi, i'm AppScopeImpl!" +this +"<br/>\n";
     }
 }

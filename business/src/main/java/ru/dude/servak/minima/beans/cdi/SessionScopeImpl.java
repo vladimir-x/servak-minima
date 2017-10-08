@@ -1,4 +1,4 @@
-package ru.dude.servak.minima.servlets.cdi;
+package ru.dude.servak.minima.beans.cdi;
 
 import javax.enterprise.context.SessionScoped;
 

@@ -1,10 +1,14 @@
 package ru.dude.servak.minima.beans;
 
+import ru.dude.servak.minima.beans.cdi.Scopables;
+import ru.dude.servak.minima.beans.cdi.Scopes;
+import ru.dude.servak.minima.beans.cdi.SomeCDI;
 import ru.dude.servak.minima.beans.entites.User;
 import ru.dude.servak.minima.beans.entites.User_;
 import ru.dude.servak.minima.beans.interfaces.DataService;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -22,6 +26,21 @@ public class DataServiceBean implements DataService{
 
     @PersistenceContext
     EntityManager em;
+
+    @Inject
+    @Scopables(Scopes.APPLICATION)
+    SomeCDI appCDI;
+
+    @Inject @Scopables(Scopes.SESSION)
+    SomeCDI sessionCDI;
+
+    @Inject @Scopables(Scopes.REQUEST)
+    SomeCDI requestCDI;
+
+    @Inject @Scopables(Scopes.DEPENDS)
+    SomeCDI dependsCDI;
+
+
 
     public String pingBean() {
         StringBuilder sb = new StringBuilder();
@@ -42,6 +61,13 @@ public class DataServiceBean implements DataService{
         List<User> userList = em.createQuery(query).getResultList();
 
         sb.append("<br/> And the are "  + userList.size() + " users in bd.<br/>");
+
+
+        sb.append( " And  now i show you some Injection component from CTX:<br/>");
+        sb.append(appCDI.test());
+        sb.append(sessionCDI.test());
+        sb.append(requestCDI.test());
+        sb.append(dependsCDI.test());
         sb.append( "bye....<br/>");
 
         return sb.toString();

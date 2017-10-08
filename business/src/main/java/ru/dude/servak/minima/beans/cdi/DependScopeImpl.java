@@ -1,7 +1,6 @@
-package ru.dude.servak.minima.servlets.cdi;
+package ru.dude.servak.minima.beans.cdi;
 
 import javax.enterprise.context.Dependent;
-import javax.enterprise.context.RequestScoped;
 
 /**
  * Created by dude on 06.10.2017.

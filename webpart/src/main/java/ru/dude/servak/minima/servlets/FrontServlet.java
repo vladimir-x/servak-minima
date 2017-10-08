@@ -1,9 +1,9 @@
 package ru.dude.servak.minima.servlets;
 
 import ru.dude.servak.minima.beans.interfaces.DataService;
-import ru.dude.servak.minima.servlets.cdi.Scopables;
-import ru.dude.servak.minima.servlets.cdi.Scopes;
-import ru.dude.servak.minima.servlets.cdi.SomeCDI;
+import ru.dude.servak.minima.beans.cdi.Scopables;
+import ru.dude.servak.minima.beans.cdi.Scopes;
+import ru.dude.servak.minima.beans.cdi.SomeCDI;
 
 import javax.ejb.EJB;
 import javax.inject.Inject;
