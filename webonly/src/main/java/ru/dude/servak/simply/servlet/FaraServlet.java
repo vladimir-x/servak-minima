@@ -25,8 +25,8 @@ public class FaraServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("FaraServlet.doGet()");
-        resp.getWriter().println("Hello! It's FaraServlet");
-        resp.getWriter().println(appScope.test());
+        resp.getWriter().println("Hello! It's FaraServlet 2");
+        resp.getWriter().println(appScope!=null ? appScope.test():"no CDI ");
         resp.getWriter().println("That's all. bye!");
     }
 }

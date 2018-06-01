@@ -15,6 +15,9 @@
     </properties>
 
     <modules>
+        <module>websimple</module>
+        <module>webonly</module>
+
         <module>business</module>
         <module>webpart</module>
         <module>earnik</module>

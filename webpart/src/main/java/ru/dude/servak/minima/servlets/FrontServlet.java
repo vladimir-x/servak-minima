@@ -38,7 +38,7 @@ public class FrontServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("FrontServlet.doGet()");
-        resp.getWriter().println("Hello! It's FrontServlet, and now i'm show ypu Ejb calling..");
+        resp.getWriter().println("Hello! It's FrontServlet, and now i'm show you Ejb calling..");
         resp.getWriter().println(dataService.pingBean());
         resp.getWriter().println(appCDI.test());
         resp.getWriter().println(sessionCDI.test());

@@ -67,7 +67,7 @@ public class DataServiceBean implements DataService{
         sb.append("<br/> And the are "  + userList.size() + " users in bd.<br/>");
 
 
-        sb.append( " And  now i show you some Injection component from CTX:<br/>");
+        sb.append("And  now i show you some Injection component from CMT:<br/>");
         sb.append(appCDI.test());
         sb.append(sessionCDI.test());
         sb.append(requestCDI.test());
