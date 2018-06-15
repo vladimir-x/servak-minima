@@ -3,4 +3,37 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
+    <!-- 1) Маппинг сервлета, устаревший вариант-->
+    <servlet>
+        <servlet-name>oldservlet</servlet-name>
+        <servlet-class>ru.dude.servak.simply.servlet.OldServlet</servlet-class>
+
+        <init-param>
+            <param-name>teamColor</param-name>
+            <param-value>blue</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>oldservlet</servlet-name>
+        <url-pattern>/oldservlet</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- 2) Фаил для отображения при доступе к артефакту-->
+    <welcome-file-list>
+        <welcome-file>oldservlet</welcome-file>
+        <welcome-file>index.xhtml</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+
+    <!-- 3) Ресурс для JDBC-->
+    <resource-ref>
+        <description>postgreSQL Datasource example</description>
+        <res-ref-name>jdbc/postgres</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
 </web-app>

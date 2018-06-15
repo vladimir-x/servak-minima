@@ -11,7 +11,7 @@
     <groupId>ru.dude.servak.minima</groupId>
     <version>1.0-SNAPSHOT</version>
 
-    <artifactId>websimple</artifactId>
+    <artifactId>websimple-servlet-only</artifactId>
     <packaging>war</packaging>
 
     <dependencies>
@@ -30,6 +30,7 @@
 
 
     <build>
+        <finalName>websimple</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
