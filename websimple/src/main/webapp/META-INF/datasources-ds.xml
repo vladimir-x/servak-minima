@@ -1,0 +1,36 @@
+<!-- датасорс (jdbc) для wildfly-->
+
+<datasources>
+    <xa-datasource jndi-name="java:/comp/env/jdbc/postgres" pool-name="jdbc/minima_pool" enabled="true">
+        <xa-datasource-property name="ServerName">
+            127.0.0.1
+        </xa-datasource-property>
+        <xa-datasource-property name="PortNumber">
+            5432
+        </xa-datasource-property>
+        <xa-datasource-property name="DatabaseName">
+            postgres
+        </xa-datasource-property>
+        <driver>postgresql</driver>
+        <xa-pool>
+            <min-pool-size>5</min-pool-size>
+            <max-pool-size>20</max-pool-size>
+            <prefill>true</prefill>
+            <use-strict-min>false</use-strict-min>
+            <flush-strategy>FailingConnectionOnly</flush-strategy>
+        </xa-pool>
+        <security>
+            <user-name>postgres</user-name>
+            <password>postgres</password>
+        </security>
+        <timeout>
+            <blocking-timeout-millis>30000</blocking-timeout-millis>
+            <idle-timeout-minutes>10</idle-timeout-minutes>
+        </timeout>
+    </xa-datasource>
+    <drivers>
+        <driver name="postgresql" module="org.postgresql">
+            <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
+        </driver>
+    </drivers>
+</datasources>
